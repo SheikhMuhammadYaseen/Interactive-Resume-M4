@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Fill Out Your Resume</h2>
+            <form id="resume-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <input type="text" id="education" placeholder="Your highest degree">
+                </div>
+                <div class="form-group">
+                    <label for="work-experience">Work Experience:</label>
+                    <input type="text" id="work-experience" placeholder="Most recent job">
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills (comma-separated):</label>
+                    <input type="text" id="skills" placeholder="e.g., JavaScript, TypeScript">
+                </div>
+                <div class="form-group">
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" accept="image/*">
+                </div>
+            </form>
+        </div>
+
+        <div class="resume-container">
+            <div class="resume">
+                <section id="personal-info" class="card">
+                    <div class="personal-header">
+                        <img id="display-pic" class="profile-pic" src="default-profile.png">
+                        <div class="personal-details">
+                            <h1 id="display-name">Your Name</h1>
+                            <p id="display-email">Your Email</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="education" class="card">
+                    <h2>Education</h2>
+                    <p id="display-education"></p>
+                </section>
+                <section id="skills" class="card">
+                    <h2>Skills</h2>
+                    <ul id="display-skills">
+                    </ul>
+                </section>
+                <section id="work-experience" class="card">
+                    <h2>Work Experience</h2>
+                    <p id="display-work-experience"></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
